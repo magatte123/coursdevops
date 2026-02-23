@@ -6,7 +6,7 @@ jobs:
   init:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Demonstration CI'
+      - run: echo 'Etape 1-Initialsation' 
       - run: echo $HOSTNAME
 
    
