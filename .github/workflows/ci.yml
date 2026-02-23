@@ -1,13 +1,33 @@
-name: Testing github workflows
+name: Demonstration CI
 
 on: push
 
-jobs:
-  init:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo 'Etape 1-Initialsation' 
-      - run: echo $HOSTNAME
+jobs : 
+  init: 
+    name : Demonstration CI
+    runs-on : ubuntu-latest
 
-   
- 
+    env:
+      STEP1: "Le code vient d'etre pousse sur github"
+      
+    steps : 
+      - name: Etape 1 - Initialisation
+        run : |
+          echo "Demarrage du pipeline d'integration continue"
+          echo "STEP= $STEP1"
+      - name: Etape 2 - Recuperation du code
+        run : |
+          echo "Recuperation du code source"
+          echo "STEP2= ${{ vars.VAR2 }}"
+      - name: Etape 3 - Build
+        run : |
+          echo ""
+      - name: Etape 4 - Test
+        run : |
+          echo ""
+      - name: Etape 5 - Packaging
+        run : |
+          echo ""
+      - name: Etape 6 - Fin du pipeline
+        run : |
+          echo ""
