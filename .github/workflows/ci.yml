@@ -1,0 +1,13 @@
+name: Testing github workflows
+
+on: push
+
+jobs:
+  init:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Hello maguette'
+      - run: echo $HOSTNAME
+
+   
+ 
